@@ -21,7 +21,8 @@ gem 'unicorn'
 gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+#gem 'ruby-debug'
+#gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test, :development do
   # Pretty printed test output
@@ -30,7 +31,7 @@ group :test, :development do
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'capybara'
-  # gem 'database_cleaner'
+  gem 'database_cleaner'
   gem 'launchy'
   gem 'culerity'
   gem 'celerity', :require => nil

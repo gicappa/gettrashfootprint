@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the new create_product page/
+      new_create_product_path
+
     when /the new supermarket_creation page/
       new_supermarket_creation_path
 
