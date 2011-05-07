@@ -27,7 +27,7 @@ gem 'capistrano'
 group :test, :development do
   # Pretty printed test output
   gem 'turn', :require => false
-  gem "rspec-rails", ">= 2.3.0"
+  gem "rspec-rails", ">= 2.6.0.rc6"
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'capybara'
