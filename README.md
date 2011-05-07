@@ -1,4 +1,4 @@
-== Welcome to Rails
+# Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
@@ -26,7 +26,7 @@ Rails. You can read more about Action Pack in
 link:files/vendor/rails/actionpack/README.html.
 
 
-== Getting Started
+# Getting Started
 
 1. At the command prompt, create a new Rails application:
        <tt>rails new myapp</tt> (where <tt>myapp</tt> is the application name)
@@ -81,7 +81,7 @@ These two books will bring you up to speed on the Ruby language and also on
 programming in general.
 
 
-== Debugger
+# Debugger
 
 Debugger support is available through the debugger command when you start your
 Mongrel or WEBrick server with --debugger. This means that you can break out of
@@ -89,30 +89,30 @@ execution at any point in the code, investigate and change the model, and then,
 resume execution! You need to install ruby-debug to run the server in debugging
 mode. With gems, use <tt>sudo gem install ruby-debug</tt>. Example:
 
-  class WeblogController < ActionController::Base
-    def index
-      @posts = Post.all
-      debugger
+    class WeblogController < ActionController::Base
+        def index
+              @posts = Post.all
+              debugger
+        end
     end
-  end
 
 So the controller will accept the action, run the first line, then present you
 with a IRB prompt in the server window. Here you can do things like:
 
-  >> @posts.inspect
-  => "[#<Post:0x14a6be8
+    >> @posts.inspect
+    => "[#<Post:0x14a6be8
           @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>,
        #<Post:0x14a6620
           @attributes={"title"=>"Rails", "body"=>"Only ten..", "id"=>"2"}>]"
-  >> @posts.first.title = "hello from a debugger"
-  => "hello from a debugger"
+    >> @posts.first.title = "hello from a debugger"
+    => "hello from a debugger"
 
 ...and even better, you can examine how your runtime objects actually work:
 
-  >> f = @posts.first
-  => #<Post:0x13630c4 @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>
-  >> f.
-  Display all 152 possibilities? (y or n)
+    >> f = @posts.first
+    => #<Post:0x13630c4 @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>
+    >> f.
+    Display all 152 possibilities? (y or n)
 
 Finally, when you're ready to resume execution, you can enter "cont".
 
@@ -142,7 +142,7 @@ More information about irb can be found at:
 link:http://www.rubycentral.org/pickaxe/irb.html
 
 
-== dbconsole
+## dbconsole
 
 You can go to the command line of your database directly through <tt>rails
 dbconsole</tt>. You would be connected to the database with the credentials
@@ -151,43 +151,43 @@ to the development database. Passing an argument will connect you to a different
 database, like <tt>rails dbconsole production</tt>. Currently works for MySQL,
 PostgreSQL and SQLite 3.
 
-== Description of Contents
+# Description of Contents
 
 The default directory structure of a generated Ruby on Rails application:
 
-  |-- app
-  |   |-- controllers
-  |   |-- helpers
-  |   |-- mailers
-  |   |-- models
-  |   `-- views
-  |       `-- layouts
-  |-- config
-  |   |-- environments
-  |   |-- initializers
-  |   `-- locales
-  |-- db
-  |-- doc
-  |-- lib
-  |   `-- tasks
-  |-- log
-  |-- public
-  |   |-- images
-  |   |-- javascripts
-  |   `-- stylesheets
-  |-- script
-  |-- test
-  |   |-- fixtures
-  |   |-- functional
-  |   |-- integration
-  |   |-- performance
-  |   `-- unit
-  |-- tmp
-  |   |-- cache
-  |   |-- pids
-  |   |-- sessions
-  |   `-- sockets
-  `-- vendor
+    |-- app
+    |   |-- controllers
+    |   |-- helpers
+    |   |-- mailers
+    |   |-- models
+    |   `-- views
+    |       `-- layouts
+    |-- config
+    |   |-- environments
+    |   |-- initializers
+    |   `-- locales
+    |-- db
+    |-- doc
+    |-- lib
+    |   `-- tasks
+    |-- log
+    |-- public
+    |   |-- images
+    |   |-- javascripts
+    |   `-- stylesheets
+    |-- script
+    |-- test
+    |   |-- fixtures
+    |   |-- functional
+    |   |-- integration
+    |   |-- performance
+    |   `-- unit
+    |-- tmp
+    |   |-- cache
+    |   |-- pids
+    |   |-- sessions
+    |   `-- sockets
+    `-- vendor
       `-- plugins
 
 app
